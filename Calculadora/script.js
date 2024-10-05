@@ -1,28 +1,24 @@
-const btnSoma = document.getElementById("soma");
-btnSoma.addEventListener ("click", () => {
-    let numero1 = document.getElementById ("numero1").value;
-    let numero2 = document.getElementById ("numero2").value;
-    let resultadoso = parseInt(numero1) + parseInt(numero2);
-    document.getElementById ("resul").innerHTML = "O resultado é " + resultadoso;
-});
-const btnSub = document.getElementById("sub");
-btnSub.addEventListener ("click", () => {
-    let numero1 = document.getElementById ("numero1").value;
-    let numero2 = document.getElementById ("numero2").value;
-    let resultadosu = parseInt(numero1) - parseInt(numero2);
-    document.getElementById ("resul").innerHTML = "O resultado é " + resultadosu;
-});
-const btnMulti = document.getElementById("multi");
-btnMulti.addEventListener ("click", () => {
-    let numero1 = document.getElementById ("numero1").value;
-    let numero2 = document.getElementById ("numero2").value;
-    let resultadomu = parseInt(numero1) * parseInt(numero2);
-    document.getElementById ("resul").innerHTML = "O resultado é " + resultadomu;
-});
-const btnDivi = document.getElementById("divi");
-btnDivi.addEventListener ("click", () => {
-    let numero1 = document.getElementById ("numero1").value;
-    let numero2 = document.getElementById ("numero2").value;
-    let resultadodi = parseInt(numero1) / parseInt(numero2);
-    document.getElementById ("resul").innerHTML = "O resultado é " + resultadodi;
-});
+function insert(num)
+{
+    var numero = document.getElementById("resultado").innerHTML;
+    document.getElementById("resultado").innerHTML = numero + num
+}
+function clean()
+{
+    document.getElementById("resultado").innerHTML = "";
+}
+function back()
+{
+    var resultado = document.getElementById("resultado").innerHTML;
+    document.getElementById("resultado").innerHTML =resultado.substring(0,resultado.length -1)
+}
+function calcular()
+{
+    var resultado = document.getElementById("resultado").innerHTML;
+    if(resultado)
+    {
+        document.getElementById("resultado").innerHTML = eval(resultado)
+    }else{
+        document.getElementById("resultado").innerHTML = "";
+    }
+}
